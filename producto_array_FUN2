@@ -1,0 +1,25 @@
+
+#include <iostream>
+
+using namespace std;
+//Variables locales
+int u[]={1,2,3,4,5};
+int v[]={10,20,30,40,50};
+
+int main(){
+//Función que retorna el producto punto de dos arreglos
+  int total=0; //Total del producto punto
+  int n = sizeof(u)/sizeof(*u); //Tamaño del arreglo u
+  int m = sizeof(v)/sizeof(*v); //Tamaño del arreglo v
+  if(n!=m)
+  {
+    cout<<"Los arreglos deben ser del mismo tamaño\n"; //Verivica si los arreglos tienen el mismo tañaño para hacer el producto punto
+  }
+  else{
+    for(int i=0;i<n;i++)
+    total=total+u[i]*v[i];
+  }
+
+  cout<< "El producto punto entre los dos arreglos es: " << total <<  endl;
+  return 0;
+}
